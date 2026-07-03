@@ -226,10 +226,6 @@ app.post('/v1/chat/completions', async (req, res) => {
   }
 });
 
-app.get('/v1', (req, res) => {
-  res.json({ status: 'ok' });
-});
-// Catch-all for unsupported endpoints
 app.all('*', (req, res) => {
   res.status(404).json({
     error: {
